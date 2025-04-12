@@ -47,9 +47,9 @@
 				4EE121842DAAB1A100B24C2B /* neko-console */,
 				4EE121832DAAB1A100B24C2B /* Products */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		4EE121832DAAB1A100B24C2B /* Products */ = {
 			isa = PBXGroup;
