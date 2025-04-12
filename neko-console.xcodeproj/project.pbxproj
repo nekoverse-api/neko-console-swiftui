@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4EE121A12DAABCC500B24C2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4EE121A02DAABCC500B24C2B /* README.md */; };
+		4EE121AB2DAB2C4600B24C2B /* SwiftJSONFormatter in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE121AA2DAB2C4600B24C2B /* SwiftJSONFormatter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE121AB2DAB2C4600B24C2B /* SwiftJSONFormatter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +82,7 @@
 			);
 			name = "neko-console";
 			packageProductDependencies = (
+				4EE121AA2DAB2C4600B24C2B /* SwiftJSONFormatter */,
 			);
 			productName = "neko-console";
 			productReference = 4EE121822DAAB1A100B24C2B /* neko-console.app */;
@@ -109,6 +112,9 @@
 			);
 			mainGroup = 4EE121792DAAB1A100B24C2B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4EE121A92DAB2C4600B24C2B /* XCRemoteSwiftPackageReference "SwiftJSONFormatter" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4EE121832DAAB1A100B24C2B /* Products */;
 			projectDirPath = "";
@@ -341,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EE121A92DAB2C4600B24C2B /* XCRemoteSwiftPackageReference "SwiftJSONFormatter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luin/SwiftJSONFormatter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EE121AA2DAB2C4600B24C2B /* SwiftJSONFormatter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EE121A92DAB2C4600B24C2B /* XCRemoteSwiftPackageReference "SwiftJSONFormatter" */;
+			productName = SwiftJSONFormatter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EE1217A2DAAB1A100B24C2B /* Project object */;
 }

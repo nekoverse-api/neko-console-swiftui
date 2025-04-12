@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import SwiftJSONFormatter
 
 struct ContentView: View {
-    @State private var method = ""
-    @State private var url = ""
+    @State private var method = "GET"
+    @State private var url = "https://echo.nekoverse.me/api/v1/test"
     @State private var response = ""
     
     func sendRequest() {
-        let url = URL(string: "https://echo.nekoverse.me/api/v1/test")!
+        var request = URLRequest(url: URL(string: self.url)!)
+        request.httpMethod = self.method
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else { return }
-            self.response = String(data: data, encoding: .utf8)!
+            let json = SwiftJSONFormatter.beautify(String(data: data, encoding: .utf8)!, indent: "      ")
+            self.response = json
         }
         task.resume()
     }
@@ -32,9 +36,8 @@ struct ContentView: View {
                 
                 Button("Send", action: sendRequest)
             }.padding(10)
-            
-            Text(method + " " + url)
-            Text(response)
+
+            Text(response).padding(10)
             
             Spacer()
         }

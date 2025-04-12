@@ -1,0 +1,15 @@
+{
+  "originHash" : "e1b7eb4b81e08b8b183f6597acd5ce38d394d1a71704446171b0c22bf7282918",
+  "pins" : [
+    {
+      "identity" : "swiftjsonformatter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/luin/SwiftJSONFormatter",
+      "state" : {
+        "revision" : "320e944bb2b54bf6946d5226b4fbb9ae907725af",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
