@@ -16,6 +16,15 @@
 
 ![image1](/docs/Screenshot%202025-04-12%20at%207.25.31 PM.png)
 
+#### Boddy Support - Screenshot 2025-04-12 at 9.32.46 PM.png
+
+- Adding NekoTextEditor 
+- Adding beautify buttons
+- Adding support for headers
+
+![image1](/docs/Screenshot%202025-04-12%20at%209.32.46%20PM.png)
+
+
 
 ## References
 
