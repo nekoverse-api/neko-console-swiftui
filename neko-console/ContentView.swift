@@ -47,6 +47,7 @@ struct ContentView: View {
                     TextField("Url", text: $url)
                     
                     Button("Send", action: sendRequest)
+                        .keyboardShortcut(.defaultAction)
                 }
                 .padding(.horizontal,  10)
                 .padding(.vertical, 10)
