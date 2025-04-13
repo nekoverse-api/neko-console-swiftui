@@ -12,7 +12,13 @@ struct ContentView: View {
     @State private var method = "POST"
     @State private var url = "https://echo.nekoverse.me/api/v1/test"
     @State private var response = ""
-    @State private var data = ""
+    @State private var data = """
+{
+    "name": "Gary Ascuy",
+    "bio": "Software Developer, Robotics & Cats Lover, Chef Amateur",
+    "stack": "SwiftUI for MacOS"
+}
+"""
     
     @State private var search = ""
     
