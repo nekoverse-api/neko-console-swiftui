@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var url = "https://echo.nekoverse.me/api/v1/test"
     @State private var response = ""
     
+    @State private var search = ""
+    
     func sendRequest() {
         var request = URLRequest(url: URL(string: self.url)!)
         request.httpMethod = self.method
@@ -27,21 +29,41 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack (alignment: .center){
-                TextField("Method", text: $method)
-                    .frame(width: 100)
-                
-                TextField("Url", text: $url)
-                
-                Button("Send", action: sendRequest)
-            }.padding(10)
-
-            Text(response).padding(10)
+        NavigationSplitView() {
+            List {
+                Text("Navigation")
+                Text("Profile")
+                Text("Settings")
+            }
+            .searchable(text: $search, prompt: "Open or Action")
             
             Spacer()
+        } content: {
+            VStack {
+                HStack(alignment: .center) {
+                    TextField("Method", text: $method)
+                        .frame(width: 100)
+                    
+                    TextField("Url", text: $url)
+                    
+                    Button("Send", action: sendRequest)
+                }
+                .padding(.horizontal,  10)
+                .padding(.vertical, 10)
+                
+                Spacer()
+            }
+        } detail: {
+            VStack {
+                Text(response)
+                    .monospaced()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                Spacer()
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical, 10)
         }
-        .padding()
     }
 }
 
