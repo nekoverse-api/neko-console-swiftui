@@ -22,7 +22,7 @@
 - Adding beautify buttons
 - Adding support for headers
 
-![image1](/docs/Screenshot%202025-04-12%20at%209.32.46 PM.png)
+![image1](/docs/Screenshot%202025-04-12%20at%209.32.46 PM.png)
 
 
 
